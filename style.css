@@ -1,3 +1,20 @@
+/*Colors*/
+:root {
+    --c-white: #FFFFFF;
+    --color-main-bg: var(--c-white);
+    --c-gray-dark: #383A4A;
+    --color-text-dark: var(--c-gray-dark);
+    --color-text-light:var(--c-white);
+    --c-purple: #495BCF;
+    --c-hero-bg: var(--c-purple);
+    --c-teal: hsl(180, 100%, 42%);
+    --color-button-primary-text: var(--c-gray-dark)
+    --c-transparent: transparent;
+    --color-nutton-secondary-bg: transparent;
+
+    --
+}
+
 *, 
 *::before,
 *::after {
@@ -12,8 +29,14 @@ a {
     text-decoration: none;
 }
 
-img, picture, svg {
+img, 
+picture, 
+svg {
     max-width: 100%;
     display: block;
 }
 
+ .wrapper {
+    width: min(alc(100% - 48px), calc(1200/16*1rem)];
+    margin-inline: auto;
+ }
