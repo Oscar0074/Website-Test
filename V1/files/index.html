@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ✏️ EDIT: page title shown in the browser tab -->
+  <title>Jane Doe — Photography & Film</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- AOS — Animate On Scroll (CDN, no install) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <!-- Your stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAV ✏️ Edit: your name -->
+  <nav id="main-nav">
+    <span class="nav-logo">Jane Doe</span>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO ✏️ Edit: tag, headline, intro text, image src -->
+  <section id="hero">
+    <div class="hero-text" data-aos="fade-right" data-aos-duration="900">
+      <span class="hero-tag">Photography &amp; Film</span>
+      <h1>Capturing<br><em>light,</em><br>motion &amp; soul.</h1>
+      <p>I'm Jane — a Paris-based photographer and filmmaker telling stories through natural light and honest moments.</p>
+      <a href="#projects" class="hero-cta">View my work <span class="arrow">→</span></a>
+    </div>
+    <div class="hero-images" data-aos="fade-left" data-aos-duration="900" data-aos-delay="200">
+      <img class="img-main"  src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=900&q=80" alt="Main portfolio photo" />
+      <img class="img-thumb" src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=80" alt="Secondary portfolio photo" />
+    </div>
+  </section>
+
+  <!-- ABOUT ✏️ Edit: portrait src, bio, skill tags -->
+  <section id="about" class="section">
+    <div data-aos="fade-right" data-aos-duration="800">
+      <img class="about-image" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=700&q=80" alt="Portrait of Jane" />
+    </div>
+    <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="150">
+      <p class="section-label">About me</p>
+      <h2>A lens for every moment.</h2>
+      <div class="divider"></div>
+      <p>Based in Paris, I've spent the last eight years documenting lives, brands, and cities across Europe and beyond. My work sits at the intersection of documentary honesty and editorial polish.</p>
+      <br>
+      <p>When I'm not behind the camera, I'm editing in my studio or leading photography workshops for young creatives.</p>
+      <!-- ✏️ Add or remove skill tags freely -->
+      <div class="skills-list">
+        <span class="skill-tag">Portrait</span>
+        <span class="skill-tag">Documentary</span>
+        <span class="skill-tag">Short film</span>
+        <span class="skill-tag">Commercial</span>
+        <span class="skill-tag">Color grading</span>
+        <span class="skill-tag">Wedding</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS — cards are injected by js/projects.js -->
+  <!-- ✏️ To add projects, open js/projects.js and edit the PROJECTS array -->
+  <section id="projects" class="section">
+    <div class="section-header">
+      <div>
+        <p class="section-label">Selected work</p>
+        <h2>Projects</h2>
+      </div>
+    </div>
+    <div class="projects-grid" id="projects-grid"></div>
+  </section>
+
+  <!-- CONTACT ✏️ Edit: email address, social links -->
+  <section id="contact" class="section">
+    <div class="contact-wrap">
+      <div class="contact-info" data-aos="fade-right" data-aos-duration="800">
+        <p class="section-label" style="color:var(--sienna)">Get in touch</p>
+        <h2>Let's make<br>something together.</h2>
+        <div class="divider"></div>
+        <p>Available for commissions, collaborations, and workshops. Drop me a message or reach out on social media.</p>
+        <p style="margin-top:.8rem; color:var(--cream)">hello@janedoe.com</p>
+        <!-- ✏️ Edit href and label for each social link -->
+        <div class="contact-social">
+          <a href="https://instagram.com" target="_blank" class="social-link">Instagram</a>
+          <a href="https://linkedin.com"  target="_blank" class="social-link">LinkedIn</a>
+          <a href="https://vimeo.com"     target="_blank" class="social-link">Vimeo</a>
+        </div>
+      </div>
+      <form class="contact-form" data-aos="fade-left" data-aos-duration="800" data-aos-delay="150" onsubmit="handleForm(event)">
+        <div class="form-group">
+          <label for="name">Your name</label>
+          <input id="name" type="text" placeholder="Marie Dupont" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="marie@example.com" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" rows="5" placeholder="Tell me about your project…" required></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send message →</button>
+        <p id="form-success">✓ Message sent — I'll be in touch soon!</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER ✏️ Edit: your name -->
+  <footer>© 2026 Jane Doe. All rights reserved.</footer>
+
+  <!-- Lightbox (no edits needed) -->
+  <div id="lightbox">
+    <button id="lightbox-close" aria-label="Close">&times;</button>
+    <img   id="lightbox-img"   src="" alt="" style="display:none" />
+    <video id="lightbox-video" controls      style="display:none"></video>
+  </div>
+
+  <!-- Scripts: AOS first, then yours -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
