@@ -17,11 +17,11 @@
 /* ─── 1. VARIABLES & RESET ─────────────────────────────────── */
 
 :root {
-  --cream:    #FAF7F2;
-  --sand:     #EDE5D8;
-  --sienna:   #B5622B;
-  --sienna2:  #8C4820;
-  --charcoal: #2B2520;
+  --cream:    #F5ECE7;
+  --sand:     #F54927;
+  --sienna:   #F4320B;
+  --sienna2:  #FEEBE7;
+  --charcoal: #010001;
   --muted:    #8A7B6E;
   --white:    #FFFFFF;
   --card-bg:  #FFFFFF;
@@ -116,6 +116,18 @@ nav.scrolled { padding: .7rem 5vw; }
 
 .nav-links a:hover { color: var(--sienna); }
 
+.nav_contact {
+  background: var(--sienna);
+  color: var(--white);
+  padding: .45rem 1.2rem;
+  border-radius: 100px;
+  transition: background .25s;
+}
+
+.nav_contact:hover {
+  background: var(--sand);
+  color: var(--white);
+}
 
 /* ─── 4. HERO ───────────────────────────────────────────────── */
 
